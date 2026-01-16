@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Robert Martí
 
-## Getting Started
+Este repositorio contiene el código fuente del portafolio personal de **Robert Martí**. Es una aplicación web moderna, optimizada y diseñada para mostrar experiencia profesional, proyectos y habilidades técnicas.
 
-First, run the development server:
+![Robert Martí Portfolio](public/og-image.jpg) 
+<!-- Nota: Si tienes una imagen de vista previa, colócala en public/ y actualiza la ruta, o usa una URL externa -->
+
+## 🚀 Tecnologías
+
+El proyecto está construido con las tecnologías más recientes del ecosistema web:
+
+*   **[Next.js 16](https://nextjs.org/)** (App Router & Turbopack) - Framework de React para producción.
+*   **[React 19](https://react.dev/)** - Biblioteca para interfaces de usuario.
+*   **[TypeScript](https://www.typescriptlang.org/)** - Tipado estático para un código robusto.
+*   **[Tailwind CSS](https://tailwindcss.com/)** - Framework de utilidades para el diseño.
+*   **[Framer Motion](https://www.framer.com/motion/)** - Animaciones fluidas.
+*   **[Simple Icons](https://simpleicons.org/)** - Iconos de marcas y tecnologías.
+
+## ✨ Características Principales
+
+*   **🎨 Diseño Glassmorphism**: Estética moderna con efectos de desenfoque y transparencias (ver `app/components/Contact.tsx`).
+*   **📱 Diseño Responsivo**: Adaptado perfectamente a móviles, tablets y escritorio.
+*   **🔍 SEO Optimizado**:
+    *   Metadatos completos (OpenGraph, Twitter Cards).
+    *   Datos estructurados JSON-LD (`Person` Schema).
+    *   Mapa del sitio (`sitemap.xml`) y `robots.txt` generados automáticamente.
+*   **⚡ Static Export**: Configurado para exportación estática (`output: 'export'`), ideal para alojar en cualquier servidor estático o CDN.
+*   **✉️ Formulario de Contacto Funcional**: Integrado con endpoint personalizado para recepción de mensajes.
+
+## 🛠️ Instalación y Uso
+
+Asegúrate de tener [Node.js](https://nodejs.org/) instalado.
+
+1.  **Clonar el repositorio:**
+
+    ```bash
+    git clone https://github.com/CrushedDEV/portfolio-robert.git
+    cd portfolio-robert
+    ```
+
+2.  **Instalar dependencias:**
+
+    ```bash
+    npm install
+    # o
+    pnpm install
+    ```
+
+3.  **Iniciar servidor de desarrollo:**
+
+    ```bash
+    npm run dev
+    ```
+
+    Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+
+## 🏗️ Construcción para Producción
+
+Este proyecto está configurado para generar una **exportación estática**.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Esto generará una carpeta `out/` con los archivos HTML/CSS/JS listos para desplegar.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> **Nota sobre Imágenes**: Al usar `output: 'export'`, el componente `<Image>` de Next.js está configurado como `unoptimized: true` en `next.config.ts` a menos que se configure un cargador externo.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Personalización
 
-## Learn More
+Todo el contenido del portafolio se gestiona centralizadamente. Para actualizar tu información, edita el siguiente archivo:
 
-To learn more about Next.js, take a look at the following resources:
+📄 **`app/data/portfolio.ts`**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Aquí puedes modificar:
+*   Información personal (Nombre, rol, descripción).
+*   Experiencia laboral.
+*   Proyectos.
+*   Tecnologías y sus iconos.
+*   Enlaces a redes sociales.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Iconos
+Para añadir nuevos iconos de tecnologías, busca el "slug" correcto en [Simple Icons](https://simpleicons.org/) y añádelo a la lista en `portfolio.ts`.
 
-## Deploy on Vercel
+## 📄 Licencia
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este proyecto es de uso personal para el portafolio de Robert Martí.
