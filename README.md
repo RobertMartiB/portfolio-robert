@@ -1,87 +1,117 @@
 # Portfolio Robert Martí
 
-Este repositorio contiene el código fuente del portafolio personal de **Robert Martí**. Es una aplicación web moderna, optimizada y diseñada para mostrar experiencia profesional, proyectos y habilidades técnicas.
+Este repositorio contiene el código fuente del portafolio personal de **Robert Martí**. Es una aplicación web moderna diseñada para mostrar experiencia profesional, proyectos y habilidades técnicas.
 
-![Robert Martí Portfolio](public/og-image.jpg) 
-<!-- Nota: Si tienes una imagen de vista previa, colócala en public/ y actualiza la ruta, o usa una URL externa -->
+## Tecnologías
 
-## 🚀 Tecnologías
+El proyecto está construido con las siguientes tecnologías:
 
-El proyecto está construido con las tecnologías más recientes del ecosistema web:
+*   **Next.js 16** (App Router & Turbopack): Framework principal.
+*   **React 19**: Biblioteca de interfaz de usuario.
+*   **TypeScript**: Lenguaje de programación.
+*   **Tailwind CSS**: Estilizado y diseño responsivo.
+*   **Framer Motion**: Animaciones.
 
-*   **[Next.js 16](https://nextjs.org/)** (App Router & Turbopack) - Framework de React para producción.
-*   **[React 19](https://react.dev/)** - Biblioteca para interfaces de usuario.
-*   **[TypeScript](https://www.typescriptlang.org/)** - Tipado estático para un código robusto.
-*   **[Tailwind CSS](https://tailwindcss.com/)** - Framework de utilidades para el diseño.
-*   **[Framer Motion](https://www.framer.com/motion/)** - Animaciones fluidas.
-*   **[Simple Icons](https://simpleicons.org/)** - Iconos de marcas y tecnologías.
+## Instalación y Ejecución
 
-## ✨ Características Principales
+Para ejecutar el proyecto en su entorno local, siga estos pasos:
 
-*   **🎨 Diseño Glassmorphism**: Estética moderna con efectos de desenfoque y transparencias (ver `app/components/Contact.tsx`).
-*   **📱 Diseño Responsivo**: Adaptado perfectamente a móviles, tablets y escritorio.
-*   **🔍 SEO Optimizado**:
-    *   Metadatos completos (OpenGraph, Twitter Cards).
-    *   Datos estructurados JSON-LD (`Person` Schema).
-    *   Mapa del sitio (`sitemap.xml`) y `robots.txt` generados automáticamente.
-*   **⚡ Static Export**: Configurado para exportación estática (`output: 'export'`), ideal para alojar en cualquier servidor estático o CDN.
-*   **✉️ Formulario de Contacto Funcional**: Integrado con endpoint personalizado para recepción de mensajes.
-
-## 🛠️ Instalación y Uso
-
-Asegúrate de tener [Node.js](https://nodejs.org/) instalado.
-
-1.  **Clonar el repositorio:**
-
+1.  **Clonar el repositorio**:
     ```bash
     git clone https://github.com/CrushedDEV/portfolio-robert.git
     cd portfolio-robert
     ```
 
-2.  **Instalar dependencias:**
-
+2.  **Instalar dependencias**:
+    Utilice npm o pnpm para instalar las librerías necesarias.
     ```bash
     npm install
-    # o
-    pnpm install
     ```
 
-3.  **Iniciar servidor de desarrollo:**
-
+3.  **Iniciar el servidor de desarrollo**:
     ```bash
     npm run dev
     ```
+    La aplicación estará disponible en `http://localhost:3000`.
 
-    Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+## Guía de Configuración y Personalización
 
-## 🏗️ Construcción para Producción
+Toda la información del portafolio está centralizada para facilitar su edición. A continuación se detalla cómo modificar cada sección.
 
-Este proyecto está configurado para generar una **exportación estática**.
+### 1. Información Personal, Experiencia y Proyectos
 
-```bash
-npm run build
+El archivo principal de configuración es:
+**`app/data/portfolio.ts`**
+
+En este archivo encontrará un objeto constante llamado `portfolioData`. Modifique los valores dentro de este objeto para actualizar el contenido de la web.
+
+*   **Perfil (hero)**: Secciones `name`, `role`, `description`.
+*   **Experiencia**: Array `experience`. Cada objeto representa un puesto laboral.
+*   **Proyectos**: Array `projects`. Incluye título, descripción, tecnologías usadas y enlaces (GitHub/Demo).
+*   **Redes Sociales**: Array `socials`. Define los enlaces a LinkedIn, GitHub, Email, etc.
+
+### 2. Tecnologías e Iconos
+
+Para modificar la sección de "Tecnologías" en `app/data/portfolio.ts`:
+
+Las tecnologías se definen en el array `technologies` dentro del mismo archivo. Cada item tiene un campo `icon`.
+
+*   **Iconos Externos**: El proyecto utiliza **Simple Icons**. Para añadir un nuevo icono, busque el "slug" (identificador) correcto en [Simple Icons](https://simpleicons.org/) y asígnelo al campo `icon`.
+
+### 3. Formulario de Contacto
+
+El formulario de contacto se encuentra en:
+**`app/components/Contact.tsx`**
+
+Este formulario utiliza un servicio externo. Para configurar su propio destino:
+
+1.  Abra el archivo `app/components/Contact.tsx`.
+2.  Busque la etiqueta `<form>` y modifique el atributo `action` con la URL de su servicio (ej. Formspree, SimpleForms).
+
+### 4. SEO y Metadatos
+
+*   **Metadatos Globales**: Edite `app/layout.tsx` (título, descripción).
+*   **Datos Estructurados**: Edite `app/page.tsx` (JSON-LD Schema).
+*   **Sitemap/Robots**: Edite `app/sitemap.ts` y `app/robots.ts`.
+
+### 5. Gestión del Blog
+
+El blog funciona mediante archivos **Markdown**.
+
+Para añadir una nueva entrada:
+1.  Cree un archivo `.md` en la carpeta **`content/blog/`**.
+2.  El nombre del archivo será la URL del post (ej. `mi-primer-post.md` -> `/blog/mi-primer-post`).
+3.  Incluya el siguiente formato (frontmatter) al inicio del archivo:
+
+```markdown
+---
+title: "Título de la Entrada"
+date: "2024-03-20"
+excerpt: "Breve descripción que aparecerá en la lista del blog."
+---
+
+Aquí empieza el contenido de tu post en Markdown...
+Puedes usar **negritas**, listas, etc.
 ```
 
-Esto generará una carpeta `out/` con los archivos HTML/CSS/JS listos para desplegar.
+## Despliegue Automático (GitHub Pages)
 
-> **Nota sobre Imágenes**: Al usar `output: 'export'`, el componente `<Image>` de Next.js está configurado como `unoptimized: true` en `next.config.ts` a menos que se configure un cargador externo.
+Este proyecto cuenta con un flujo de trabajo automatizado para desplegarse en **GitHub Pages**.
 
-## 📂 Personalización
+**Pasos para desplegar:**
 
-Todo el contenido del portafolio se gestiona centralizadamente. Para actualizar tu información, edita el siguiente archivo:
+1.  **Subir cambios**: Simplemente haga un `commit` y un `push` a la rama `main` de su repositorio.
+    ```bash
+    git add .
+    git commit -m "Actualizar portafolio"
+    git push origin main
+    ```
 
-📄 **`app/data/portfolio.ts`**
+2.  **Proceso Automático**: GitHub Actions detectará el cambio, construirá el proyecto y lo desplegará automáticamente.
 
-Aquí puedes modificar:
-*   Información personal (Nombre, rol, descripción).
-*   Experiencia laboral.
-*   Proyectos.
-*   Tecnologías y sus iconos.
-*   Enlaces a redes sociales.
+3.  **Configuración Inicial (Solo una vez)**:
+    *   Vaya a la pestaña **Settings** de su repositorio en GitHub.
+    *   Entre en la sección **Pages** (menú lateral izquierdo).
+    *   En "Build and deployment", asegúrese de que **Source** esté en **GitHub Actions**.
 
-### Iconos
-Para añadir nuevos iconos de tecnologías, busca el "slug" correcto en [Simple Icons](https://simpleicons.org/) y añádelo a la lista en `portfolio.ts`.
-
-## 📄 Licencia
-
-Este proyecto es de uso personal para el portafolio de Robert Martí.
+No es necesario configurar nada más. El archivo `.github/workflows/nextjs.yml` se encarga de todo.
