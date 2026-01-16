@@ -19,6 +19,7 @@ const nextConfig: NextConfig = {
   },
   output: 'export',
   trailingSlash: true,
+  basePath: '/portfolio-robert',
 };
 
 export default nextConfig;
