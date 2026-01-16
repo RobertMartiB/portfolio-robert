@@ -87,11 +87,10 @@ export default function Technologies() {
     return (
         <section id="skills" className="w-full py-12 bg-black/50 border-y border-white/5 overflow-hidden select-none">
             <div className="max-w-3xl mx-auto px-6">
-                <div className="flex items-center gap-4 mb-8">
-                    <h2 className="text-sm font-bold text-zinc-500 uppercase tracking-widest bg-black z-10 pr-4">
+                <div className="flex justify-center mb-8">
+                    <h2 className="text-sm font-bold text-zinc-500 uppercase tracking-widest bg-black z-10 px-4">
                         {title}
                     </h2>
-                    <div className="h-px bg-white/10 flex-grow" />
                 </div>
 
                 <div

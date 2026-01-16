@@ -133,6 +133,14 @@ export const portfolioData = {
             links: { github: '#', demo: '#' },
             image: 'https://placehold.co/600x400/1a1a1a/white.png?text=Portfolio+V1',
             featured: true
+        },
+                {
+            title: 'Portfolio V1',
+            description: 'Iteración anterior de mi portafolio personal.',
+            tags: ['HTML', 'SCSS', 'JS'],
+            links: { github: '#', demo: '#' },
+            image: 'https://placehold.co/600x400/1a1a1a/white.png?text=Portfolio+V1',
+            featured: false
         }
     ],
 
@@ -157,7 +165,7 @@ export const portfolioData = {
             items: [
                 { name: "Cisco", icon: "cisco" },
                 { name: "AWS", icon: "amazonaws" },
-                { name: "Azure", icon: "azure" },
+                { name: "Azure", icon: "microsoftazure" },
                 { name: "VMware", icon: "vmware" },
                 { name: "Docker", icon: "docker" }
             ]
