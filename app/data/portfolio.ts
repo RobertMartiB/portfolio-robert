@@ -42,40 +42,41 @@ export const portfolioData = {
     //  EXPERIENCIA
     // =========================================================================================
 
- experience: [
+  experience: [
     {
-        title: 'Administrador de Sistemas',
-        role: 'Administrador de Sistemas',
-        company: 'Techpole Solutions',      // Ahora ya no dará error en línea 20
-        location: 'Barcelona, España',      // Ahora ya no dará error en línea 22
+        title: 'Senior System Administrator',
+        role: 'Senior System Administrator',
+        company: 'Techpole Solutions',
+        location: 'Barcelona, España (Híbrido)',
         period: 'Actualidad',
-        // IMPORTANTE: Convertimos el texto en una LISTA [] para que el .map funcione
         description: [
-            'Responsable de la infraestructura crítica y continuidad operativa.',
-            'Administración de servidores Windows/Linux y entornos virtualizados.',
-            'Implementación de políticas de Backup y gestión de firewalls.',
-            'Resolución de incidencias críticas (Soporte Nivel 2/3).'
+            'Administración avanzada de infraestructura crítica basada en Windows Server y distribuciones Linux (Debian/Ubuntu).',
+            'Gestión de entornos de virtualización empresarial con VMware vSphere y Microsoft Hyper-V.',
+            'Implementación y despliegue de infraestructura en la nube utilizando AWS (EC2, S3, VPC, IAM).',
+            'Configuración de seguridad perimetral, túneles VPN IPsec y gestión de firewalls empresariales.',
+            'Automatización de tareas administrativas mediante scripting avanzado y monitorización de servicios esenciales.'
         ],
-        tags: ['Windows Server', 'Linux', 'VMware', 'Cybersecurity'],
+        tags: ['AWS', 'Windows Server', 'Linux', 'VMware', 'Cybersecurity', 'VPN'],
         links: { github: '#', demo: '#' },
-        image: './tu-imagen.webp',
+        image: './tu-imagen-techpole.webp',
         featured: true
     },
     {
-        title: 'Infraestructura Web & Backend',
-        role: 'Infraestructura Web & Backend',
+        title: 'SysAdmin & Web Infrastructure Specialist',
+        role: 'SysAdmin & Web Infrastructure Specialist',
         company: 'Asialink',
-        location: 'Remoto',
+        location: 'Barcelona, España (Presencial)',
         period: 'Anterior',
         description: [
-            'Gestión integral del entorno web corporativo.',
-            'Administración y despliegue del servidor web y bases de datos.',
-            'Optimización de arquitectura CMS (WordPress).',
-            'Implementación de SEO técnico y análisis de datos.'
+            'Administración de servidores web (Apache/Nginx) y optimización de bases de datos SQL para entornos de alta disponibilidad.',
+            'Gestión de infraestructura Backend y despliegue de servicios en contenedores para optimizar recursos.',
+            'Implementación de políticas de backup, recuperación ante desastres y securización de arquitecturas CMS.',
+            'Mantenimiento de redes locales, gestión de DNS, certificados SSL y conectividad de la sede central.',
+            'Auditoría técnica de sistemas para la mejora del rendimiento y la escalabilidad de la arquitectura web.'
         ],
-        tags: ['Backend', 'SQL', 'WordPress', 'SEO Técnico'],
+        tags: ['Nginx', 'SQL', 'Backend Infra', 'Cloud Services', 'Networking'],
         links: { github: '#', demo: '#' },
-        image: './tu-imagen-2.webp',
+        image: './tu-imagen-asialink.webp',
         featured: false
     },
 ],
