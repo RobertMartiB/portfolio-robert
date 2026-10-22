@@ -117,14 +117,17 @@ export default function Technologies() {
                                 key={index}
                                 className="flex items-center gap-3 opacity-50 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0 shrink-0 mr-16"
                             >
-                                <div className="relative w-8 h-8 pointer-events-none">
-                                    <Image
-                                        src={`https://cdn.simpleicons.org/${item.icon}/white`}
-                                        alt={item.name}
-                                        fill
-                                        className="object-contain"
-                                    />
-                                </div>
+                                {/* Simple Icons ya no tiene las marcas de Microsoft y Amazon: sin icono solo se muestra el nombre */}
+                                {item.icon && (
+                                    <div className="relative w-8 h-8 pointer-events-none">
+                                        <Image
+                                            src={`https://cdn.simpleicons.org/${item.icon}/white`}
+                                            alt={item.name}
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                )}
                                 <span className="text-lg font-medium text-white/90 pointer-events-none">
                                     {item.name}
                                 </span>

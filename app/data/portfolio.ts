@@ -5,10 +5,10 @@ export const portfolioData = {
     personal: {
         name: "Robert",
         surname: "Martí",
-        title: "Hola, mi nombre és",
-        location: "Granollers,Catalunya",
+        title: "Hola, mi nombre es",
+        location: "Granollers, Catalunya",
         // Tu biografía corta
-        bio: ""
+        bio: "Técnico de sistemas. Técnico Superior en ASIX y estudiante de Ingeniería Informática en la UOC. Linux, Windows Server, Proxmox, Bash y redes. Busco mi primer puesto como técnico de sistemas o de CPD."
     },
 
     // =========================================================================================
@@ -17,23 +17,18 @@ export const portfolioData = {
 
     socials: [
         {
-            label: 'Instagram',
-            href: 'https://github.com',
-            icon: 'Instagram'
+            label: 'GitHub',
+            href: 'https://github.com/RobertMartiB',
+            icon: 'Github'
         },
         {
             label: 'LinkedIn',
-            href: 'https://linkedin.com',
+            href: 'https://www.linkedin.com/in/robert-marti-badia-119710235/',
             icon: 'Linkedin'
         },
         {
-            label: 'Twitter',
-            href: 'https://twitter.com',
-            icon: 'Twitter'
-        },
-        {
             label: 'Email',
-            href: 'mailto:contacto@ejemplo.com',
+            href: 'mailto:martibadiarobert@gmail.com',
             icon: 'Mail'
         },
     ],
@@ -44,37 +39,35 @@ export const portfolioData = {
 
   experience: [
     {
-        title: 'Junior System Administrator',
-        role: 'Junior System Administrator',
+        title: 'Desarrollador web',
+        role: 'Desarrollador web',
         company: 'Techpole Solutions',
-        location: 'Barcelona, España (Híbrido)',
-        period: 'Actualidad',
+        location: 'Les Franqueses del Vallès, España (Híbrido) · Jornada parcial',
+        period: 'ene. 2025 – sep. 2025',
         description: [
-            'Administración avanzada de infraestructura crítica basada en Windows Server y distribuciones Linux (Debian/Ubuntu).',
-            'Gestión de entornos de virtualización empresarial con VMware vSphere y Microsoft Hyper-V.',
-            'Implementación y despliegue de infraestructura en la nube utilizando AWS (EC2, S3, VPC, IAM).',
-            'Configuración de seguridad perimetral, túneles VPN IPsec y gestión de firewalls empresariales.',
-            'Automatización de tareas administrativas mediante scripting avanzado y monitorización de servicios esenciales.'
+            'Mantenimiento de la tienda online PrestaShop: actualizaciones de la plataforma y sus módulos, y corrección de errores.',
+            'Copias de seguridad y pruebas antes de publicar cambios.',
+            'Alta y actualización del catálogo de productos.'
         ],
-        tags: ['AWS', 'Windows Server', 'Linux', 'VMware', 'Cybersecurity', 'VPN', 'Docker', 'Scripting'],
+        tags: ['PrestaShop', 'Mantenimiento', 'Copias de seguridad'],
         links: { github: '#', demo: '#' },
         image: './tu-imagen-techpole.webp',
         featured: true
     },
     {
-        title: 'Junior SysAdmin & Web Infrastructure Specialist',
-        role: 'Junior SysAdmin & Web Infrastructure Specialist',
+        title: 'Técnico de sistemas y web en prácticas (FCT)',
+        role: 'Técnico de sistemas y web en prácticas (FCT)',
         company: 'Asialink',
         location: 'Barcelona, España (Presencial)',
-        period: 'Anterior',
+        period: 'oct. 2024 – mar. 2025',
         description: [
-            'Administración de servidores web (Apache/Nginx) y optimización de bases de datos SQL para entornos de alta disponibilidad.',
-            'Gestión de infraestructura Backend y despliegue de servicios en contenedores para optimizar recursos.',
-            'Implementación de políticas de backup, recuperación ante desastres y securización de arquitecturas CMS.',
-            'Mantenimiento de redes locales, gestión de DNS, certificados SSL y conectividad de la sede central.',
-            'Auditoría técnica de sistemas para la mejora del rendimiento y la escalabilidad de la arquitectura web.'
+            'Soporte técnico a compañeros con incidencias en sus equipos.',
+            'Copias de seguridad periódicas.',
+            'Despliegue inicial de la web corporativa en AWS antes de pasar a la solución final con WordPress.',
+            'Supervisión continua de la web para detectar y corregir errores.',
+            'Sustitución de la web corporativa por una nueva hecha con WordPress.'
         ],
-        tags: ['Nginx', 'SQL', 'Backend Infra', 'Cloud Services', 'Networking', 'AWS', 'Docker'],
+        tags: ['WordPress', 'AWS', 'Copias de seguridad', 'Soporte técnico'],
         links: { github: '#', demo: '#' },
         image: './tu-imagen-asialink.webp',
         featured: false
@@ -88,20 +81,20 @@ export const portfolioData = {
     projects: [
 
         {
-            title: 'SysAdmin Tools con Bash',
-            description: 'Un script en Bash que permite gestionar usuarios en sistemas Linux de manera sencilla y eficiente, facilitando tareas administrativas comunes.',
-            tags: ['Bash', 'Linux', 'Shell', 'scripting'],
+            title: 'linux-admin-toolkit',
+            description: 'Herramienta en Bash con menús en terminal (whiptail) para administrar servidores Linux: alta y baja de usuarios, listados y bloqueo temporal o permanente de cuentas con temporizadores de systemd. En desarrollo: grupos, sudoers, firewall UFW, red, servicios, monitorización y copias de seguridad.',
+            tags: ['Bash', 'Linux', 'systemd', 'whiptail'],
             links: {
-                github: 'https://github.com/RobertMartiB/sysadmin-tools-bash', demo: '#'
+                github: 'https://github.com/RobertMartiB/linux-admin-toolkit', demo: '#'
             },
             image: './Adobe Express - file.webp',
             featured: true
         },
 
         {
-            title: 'Fast Fuel ',
-            description: 'Este es el proyecto de mi equipo para el proyecto final del ciclo de administración de sistemas. Consiste en una página web para realizar los pedido y pagos en tiempo real a demas implementamos circuito para simualñr el sistema de repostaje de una gasoliuenra normal i corinete',
-            tags: ['Windows Server', 'Linux', 'Scripting', 'Arduino', 'HTML', 'CSS', 'SQL'],
+            title: 'Fast Fuel',
+            description: 'Proyecto final en equipo del CFGS ASIX (nov. 2024 – may. 2025). Sistema de pedidos y control de stock para una estación de servicio con zona de comida rápida, con pagos en tiempo real y un dispensador real con Arduino que simula el repostaje.',
+            tags: ['Proxmox', 'NGINX', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'Arduino'],
             links: {
                 github: 'https://publuu.com/flip-book/1048400/2324769/page/2', demo: '#'
             },
@@ -121,24 +114,41 @@ export const portfolioData = {
             category: "Sistemas",
             items: [
                 { name: "Linux", icon: "linux" },
-                { name: "Windows Server", icon: "windows" },
-                { name: "Ubuntu", icon: "ubuntu" },]
+                { name: "Windows Server", icon: "" },
+                { name: "Ubuntu", icon: "ubuntu" },
+                { name: "Debian", icon: "debian" },]
         },
         {
-            category: "Redes & Cloud",
+            category: "Virtualización & Cloud",
+            items: [
+                { name: "Proxmox", icon: "proxmox" },
+                { name: "VMware", icon: "vmware" },
+                { name: "Docker", icon: "docker" },
+                { name: "AWS", icon: "" },
+                { name: "Azure", icon: "" },
+            ]
+        },
+        {
+            category: "Redes",
             items: [
                 { name: "Cisco", icon: "cisco" },
-                { name: "AWS", icon: "amazonaws" },
-                { name: "Azure", icon: "microsoftazure" },
-                { name: "VMware", icon: "vmware" },
             ]
         },
         {
             category: "Scripting & Tools",
             items: [
                 { name: "Bash", icon: "gnubash" },
-                { name: "PowerShell", icon: "powershell" },
+                { name: "Python", icon: "python" },
+                { name: "SQL", icon: "mysql" },
+                { name: "PowerShell", icon: "" },
                 { name: "Git", icon: "git" },
+            ]
+        },
+        {
+            category: "Web",
+            items: [
+                { name: "PrestaShop", icon: "prestashop" },
+                { name: "WordPress", icon: "wordpress" },
             ]
         }
     ],

@@ -11,8 +11,8 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Robert Martí",
-    "url": "https://robertmarti.com",
-    "jobTitle": "Desarrollador de Software",
+    "url": "https://robertmartib.github.io/portfolio-robert/",
+    "jobTitle": "Técnico de sistemas",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Granollers",
@@ -20,8 +20,8 @@ export default function Home() {
       "addressCountry": "ES"
     },
     "sameAs": [
-      "https://github.com/robertmarti", // Placeholder
-      "https://linkedin.com/in/robertmarti" // Placeholder
+      "https://github.com/RobertMartiB",
+      "https://www.linkedin.com/in/robert-marti-badia-119710235/"
     ]
   };
 

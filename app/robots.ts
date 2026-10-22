@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://robertmarti.com/sitemap.xml', // Matching the placeholder domain
+        sitemap: 'https://robertmartib.github.io/portfolio-robert/sitemap.xml',
     };
 }

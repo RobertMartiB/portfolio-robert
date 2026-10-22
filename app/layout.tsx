@@ -13,24 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Robert Martí | Desarrollador de Software",
-  description: "Portafolio de Robert Martí, Desarrollador de Software y Técnico ASIR. Especializado en desarrollo web, administración de sistemas y soluciones cloud.",
-  keywords: ["Desarrollador de Software", "Robert Martí", "ASIR", "Desarrollo Web", "Full Stack", "React", "Next.js", "Granollers", "España"],
+  title: "Robert Martí | Técnico de sistemas",
+  description: "Portafolio de Robert Martí, técnico de sistemas: Técnico Superior en ASIX y estudiante de Ingeniería Informática. Linux, Windows Server, Proxmox, Bash y redes.",
+  keywords: ["Técnico de sistemas", "Administrador de sistemas", "CPD", "Linux", "Windows Server", "Proxmox", "Bash", "Robert Martí", "ASIX", "Granollers", "Barcelona"],
   authors: [{ name: "Robert Martí" }],
   creator: "Robert Martí",
   openGraph: {
-    title: "Robert Martí | Desarrollador de Software",
-    description: "Portafolio profesional de Robert Martí. Proyectos, experiencia y habilidades en desarrollo de software y sistemas.",
-    url: "https://robertmarti.com",
+    title: "Robert Martí | Técnico de sistemas",
+    description: "Portafolio profesional de Robert Martí. Proyectos, experiencia y habilidades en administración de sistemas.",
+    url: "https://robertmartib.github.io/portfolio-robert/",
     siteName: "Robert Martí Portfolio",
     locale: "es_ES",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Robert Martí | Desarrollador de Software",
+    title: "Robert Martí | Técnico de sistemas",
     description: "Portafolio profesional de Robert Martí. Proyectos, experiencia y habilidades.",
-    creator: "@robertmarti", // Placeholder handle
   },
   robots: {
     index: true,
