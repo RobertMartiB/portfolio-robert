@@ -19,7 +19,7 @@ Mi web personal como **técnico de sistemas**: experiencia, proyectos (como [lin
 
 ## Despliegue automático
 
-Cada `push` a `main` lanza un flujo de **GitHub Actions** (`.github/workflows/nextjs.yml`) que construye la web y la publica en **GitHub Pages**. No hay servidor que mantener.
+Cada `push` a `main` lanza un flujo de **GitHub Actions** (`.github/workflows/deploy.yml`) que construye la web y la publica en **GitHub Pages**. No hay servidor que mantener.
 
 ## Estructura
 
